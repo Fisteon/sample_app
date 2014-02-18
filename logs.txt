@@ -1,0 +1,101 @@
+2014-02-16T18:17:45.919578+00:00 app[web.1]:                 FROM pg_attribute a LEFT JOIN pg_attrdef d
+2014-02-16T18:17:45.919920+00:00 app[web.1]: Completed 500 Internal Server Error in 2ms
+2014-02-16T18:17:45.919920+00:00 app[web.1]:                ORDER BY a.attnum
+2014-02-16T18:17:45.919747+00:00 app[web.1]: :               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2014-02-16T18:17:45.919747+00:00 app[web.1]: 
+2014-02-16T18:17:45.919747+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2014-02-16T18:17:45.919578+00:00 app[web.1]:                ORDER BY a.attnum
+2014-02-16T18:17:45.921167+00:00 app[web.1]:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:45.921167+00:00 app[web.1]:                   ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2014-02-16T18:17:45.919747+00:00 app[web.1]:                   ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2014-02-16T18:17:45.921167+00:00 app[web.1]: 
+2014-02-16T18:17:45.919747+00:00 app[web.1]:                                           ^
+2014-02-16T18:17:45.921167+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "users" does not exist
+2014-02-16T18:17:45.919920+00:00 app[web.1]: 
+2014-02-16T18:17:45.919747+00:00 app[web.1]:                  AND a.attnum > 0 AND NOT a.attisdropped
+2014-02-16T18:17:45.919747+00:00 app[web.1]:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:45.921338+00:00 app[web.1]: ):
+2014-02-16T18:17:45.921489+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2014-02-16T18:17:45.921338+00:00 app[web.1]: 
+2014-02-16T18:17:45.919920+00:00 app[web.1]: Completed 500 Internal Server Error in 2ms
+2014-02-16T18:17:45.921338+00:00 app[web.1]: 
+2014-02-16T18:17:45.921338+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "users" does not exist
+2014-02-16T18:17:45.921338+00:00 app[web.1]: 
+2014-02-16T18:17:45.921489+00:00 app[web.1]:                 FROM pg_attribute a LEFT JOIN pg_attrdef d
+2014-02-16T18:17:45.921489+00:00 app[web.1]:                  AND a.attnum > 0 AND NOT a.attisdropped
+2014-02-16T18:17:45.921167+00:00 app[web.1]: LINE 5:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:45.921338+00:00 app[web.1]: :               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2014-02-16T18:17:45.921167+00:00 app[web.1]:                  AND a.attnum > 0 AND NOT a.attisdropped
+2014-02-16T18:17:45.921338+00:00 app[web.1]:   app/controllers/users_controller.rb:3:in `new'
+2014-02-16T18:17:45.921489+00:00 app[web.1]: 
+2014-02-16T18:17:45.921489+00:00 app[web.1]:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:45.921489+00:00 app[web.1]:   app/controllers/users_controller.rb:3:in `new'
+2014-02-16T18:17:45.921489+00:00 app[web.1]:                   ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2014-02-16T18:17:45.921489+00:00 app[web.1]: 
+2014-02-16T18:17:45.921338+00:00 app[web.1]:                ORDER BY a.attnum
+2014-02-16T18:17:45.921338+00:00 app[web.1]:                                           ^
+2014-02-16T18:17:45.921489+00:00 app[web.1]: ):
+2014-02-16T18:17:45.921338+00:00 app[web.1]: LINE 5:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:45.921489+00:00 app[web.1]:                ORDER BY a.attnum
+2014-02-16T18:17:46.048601+00:00 app[web.1]: Processing by UsersController#new as HTML
+2014-02-16T18:17:46.047822+00:00 app[web.1]: Started GET "/signup" for 193.14.140.201 at 2014-02-16 18:17:46 +0000
+2014-02-16T18:17:46.048601+00:00 app[web.1]: Processing by UsersController#new as HTML
+2014-02-16T18:17:46.047822+00:00 app[web.1]: Started GET "/signup" for 193.14.140.201 at 2014-02-16 18:17:46 +0000
+2014-02-16T18:17:46.050919+00:00 app[web.1]: PG::Error: ERROR:  relation "users" does not exist
+2014-02-16T18:17:46.050919+00:00 app[web.1]: LINE 5:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:46.050919+00:00 app[web.1]:                                           ^
+2014-02-16T18:17:46.050919+00:00 app[web.1]: :               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2014-02-16T18:17:46.051080+00:00 app[web.1]:                ORDER BY a.attnum
+2014-02-16T18:17:46.050748+00:00 app[web.1]: PG::Error: ERROR:  relation "users" does not exist
+2014-02-16T18:17:46.050919+00:00 app[web.1]:                 FROM pg_attribute a LEFT JOIN pg_attrdef d
+2014-02-16T18:17:46.051080+00:00 app[web.1]: Completed 500 Internal Server Error in 2ms
+2014-02-16T18:17:46.050748+00:00 app[web.1]: :               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2014-02-16T18:17:46.052139+00:00 app[web.1]: 
+2014-02-16T18:17:46.050748+00:00 app[web.1]: LINE 5:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:46.050748+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2014-02-16T18:17:46.050748+00:00 app[web.1]:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:46.050919+00:00 app[web.1]:                   ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2014-02-16T18:17:46.051080+00:00 app[web.1]: 
+2014-02-16T18:17:46.050919+00:00 app[web.1]:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:46.052139+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "users" does not exist
+2014-02-16T18:17:46.050919+00:00 app[web.1]:                  AND a.attnum > 0 AND NOT a.attisdropped
+2014-02-16T18:17:46.052139+00:00 app[web.1]: LINE 5:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:46.052139+00:00 app[web.1]:                                           ^
+2014-02-16T18:17:46.050748+00:00 app[web.1]:                                           ^
+2014-02-16T18:17:46.050748+00:00 app[web.1]:                 FROM pg_attribute a LEFT JOIN pg_attrdef d
+2014-02-16T18:17:46.050748+00:00 app[web.1]:                   ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2014-02-16T18:17:46.050748+00:00 app[web.1]:                  AND a.attnum > 0 AND NOT a.attisdropped
+2014-02-16T18:17:46.050748+00:00 app[web.1]:                ORDER BY a.attnum
+2014-02-16T18:17:46.051080+00:00 app[web.1]: Completed 500 Internal Server Error in 2ms
+2014-02-16T18:17:46.050919+00:00 app[web.1]: 
+2014-02-16T18:17:46.050919+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2014-02-16T18:17:46.052139+00:00 app[web.1]: :               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2014-02-16T18:17:46.052139+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2014-02-16T18:17:46.052139+00:00 app[web.1]:                 FROM pg_attribute a LEFT JOIN pg_attrdef d
+2014-02-16T18:17:46.052139+00:00 app[web.1]:                   ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2014-02-16T18:17:46.052139+00:00 app[web.1]:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:46.052315+00:00 app[web.1]:                ORDER BY a.attnum
+2014-02-16T18:17:46.052315+00:00 app[web.1]: 
+2014-02-16T18:17:46.052315+00:00 app[web.1]: 
+2014-02-16T18:17:46.052315+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "users" does not exist
+2014-02-16T18:17:46.052315+00:00 app[web.1]: LINE 5:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:46.052315+00:00 app[web.1]:                                           ^
+2014-02-16T18:17:46.052477+00:00 app[web.1]:                   ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2014-02-16T18:17:46.052477+00:00 app[web.1]:                WHERE a.attrelid = '"users"'::regclass
+2014-02-16T18:17:46.052315+00:00 app[web.1]:   app/controllers/users_controller.rb:3:in `new'
+2014-02-16T18:17:46.052477+00:00 app[web.1]: ):
+2014-02-16T18:17:46.052315+00:00 app[web.1]: ):
+2014-02-16T18:17:46.052477+00:00 app[web.1]:                  AND a.attnum > 0 AND NOT a.attisdropped
+2014-02-16T18:17:46.052477+00:00 app[web.1]:                ORDER BY a.attnum
+2014-02-16T18:17:46.052477+00:00 app[web.1]:   app/controllers/users_controller.rb:3:in `new'
+2014-02-16T18:17:46.052477+00:00 app[web.1]: 
+2014-02-16T18:17:46.052477+00:00 app[web.1]:                 FROM pg_attribute a LEFT JOIN pg_attrdef d
+2014-02-16T18:17:46.052315+00:00 app[web.1]: 
+2014-02-16T18:17:46.052315+00:00 app[web.1]: :               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2014-02-16T18:17:46.052139+00:00 app[web.1]:                  AND a.attnum > 0 AND NOT a.attisdropped
+2014-02-16T18:17:46.052477+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2014-02-16T18:17:46.052477+00:00 app[web.1]: 
+2014-02-16T18:16:52.366022+00:00 heroku[router]: at=info method=GET path=/assets/application-68b1b30cd16f23ce75375f0890d362c4.css host=tranquil-depths-2503.herokuapp.com request_id=9da149ba-c4e4-447d-ae72-5bda390da4c3 fwd="193.14.140.201" dyno=web.1 connect=1ms service=32ms status=200 bytes=111124
+2014-02-16T18:16:58.869971+00:00 heroku[router]: at=info method=GET path=/signup host=tranquil-depths-2503.herokuapp.com request_id=4f23692d-c559-4619-928f-6a88953ab94a fwd="193.14.140.201" dyno=web.1 connect=36ms service=30ms status=500 bytes=1588
+2014-02-16T18:17:46.057325+00:00 heroku[router]: at=info method=GET path=/signup host=tranquil-depths-2503.herokuapp.com request_id=8cd193e2-a3f3-4868-aff6-df2b1343dc34 fwd="193.14.140.201" dyno=web.1 connect=2ms service=10ms status=500 bytes=1588
+2014-02-16T18:17:45.925182+00:00 heroku[router]: at=info method=GET path=/signup host=tranquil-depths-2503.herokuapp.com request_id=b90ccbd7-3d37-4d9c-853f-3173476ff42a fwd="193.14.140.201" dyno=web.1 connect=4ms service=9ms status=500 bytes=1588
